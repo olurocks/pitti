@@ -1,38 +1,221 @@
+
+
 .App {
   text-align: center;
+  background-size: 100px 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./Components/banner.png'); /* Path to your background image */
+  background-size: contain;
+  background-repeat: repeat; /* Repeat the background image */
+  opacity: 0.2; /* Make the background image faded */
+  z-index: -1; /* Place the background behind other content */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.App::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(165, 42, 42, 0.2); /* Translucent brownish overlay */
+  z-index: -1; /* Place the overlay behind other content but above the background image */
+}
+
+.goo {
+  position: relative;
+  width: 600px;
+  margin: auto;
+  filter: url(#goo);
+}
+
+.drop {
+  opacity: 0;
+  width: 30px;
+  height: 40px;
+  background: #0090ff; /* Adjusted hue */
+  border-radius: 1000px;
+  position: absolute;
+  animation: drip 8s infinite;
+  border: 2px solid #005bb5; /* $hue-dark equivalent */
+  border-top: none;
+  top: 170px;
+  left: 70px;
+}
+
+.drop:nth-child(2) {
+  left: 130px;
+  animation-delay: 3s;
+}
+
+.drop:nth-child(3) {
+  left: 297px;
+  animation-delay: 2s;
+}
+
+.drop:nth-child(4) {
+  left: 203px;
+  animation-delay: 4s;
+}
+
+.drop:nth-child(5) {
+  left: 415px;
+  animation-delay: 1.5s;
+}
+
+.drop:nth-child(6) {
+  left: 509px;
+  animation-delay: 5s;
+}
+
+@keyframes drip {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
   }
+  
+  35% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  
+  50% {
+    transform: translateY(110vh);
+  }
+  
+  100% {
+    transform: translateY(110vh);
+  }
+}
+
+
+.App-header-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin-top: 60px; /* Top margin to reflect */
+  flex-direction: row;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #6f4e36;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  color: white;
+  height: 70px;
+  margin-top: 130px;
+  width: 300px;
+  margin: 0 20px;
+  border-radius: 7px;
+}
+
+.App-header-div {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px;
+  text-decoration: none;
+}
+
+.App-header-link {
+  background-color: #d2bdad;
+  border-radius: 100px;
+  box-shadow: 0px 4px 6px rgba(146, 97, 93, 0.3); /* Add box-shadow with opacity */
+  color: brown;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  font-weight: 600;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color to prevent default link color */
+}
+
+.App-header-link:hover {
+  box-shadow: 0px 4px 8px rgba(178, 165, 147, 0.5); /* Add hover effect with opacity */
+  transform: scale(1.07) rotate(-1deg);
+  font-weight: bold;
+}
+.App-content{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.App-meme {
+  max-width: 100%;
+  height: auto;
+  margin-top: 30px;
+  width: 300px;
+  border: solid #191712;
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.spaced-text {
+  display: block;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.description{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  font-size: 28px;
+  color: #3c1f10;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.link-prop {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.link-prop img {
+  width: 40px; /* Set the size of the icons */
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.header-image {
+  width: 70px; /* Set the width of the image */
+  height: 70px; /* Maintain aspect ratio */
+  margin-left: 20px; /* Space between the image and the header */
+  border: solid 2px;
+  border-radius: 300px;
 }
