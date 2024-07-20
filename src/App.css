@@ -248,46 +248,42 @@ a {
   border-radius: 300px;
 }
 
-@media (max-width: 480px) {
-  .App-header-container {
-    flex-direction: column;
-    margin-top: 10px;
+@media (max-width: 768px) {
+  h1 {
+    font-size: 80px;
+    font-family: sans-serif;
+    color: #6f4e36;
+  }
+  
+  .description {
+    font-size: 24px;
   }
 
   .App-header {
     width: 100%;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
   }
 
-  .App-header-div {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .App-header-link {
-    width: 100%;
-    padding: 10px;
-    font-size: 12px;
-  }
-
   .header-image {
-    width: 40px;
-    height: 40px;
-    margin: 0 auto 10px auto;
+    display: none;
   }
 
-  .description {
-    font-size: 20px;
-    margin-top: 15px;
+  .App-meme {
+    width: 250px;
   }
 
-  .links {
-    flex-direction: column;
-    gap: 5px;
-  }
+  .goo {
+    height: auto;
+    filter: none;
+    color: #6f4e36;
+    }
 
-  .link-prop img {
-    width: 25px;
-    height: 25px;
+  .drop {
+    display: none;
   }
 }
