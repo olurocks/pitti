@@ -61,7 +61,7 @@ function App() {
       </svg>
       
       <div className="goo">
-        <h1>drip.</h1>
+        <h1>$PITTI.</h1>
         <div className="drop"></div>
         <div className="drop"></div>
         <div className="drop"></div>
@@ -70,7 +70,6 @@ function App() {
         <div className="drop"></div>
       </div>
       
-      <h1 style={{ textAlign: 'center', fontSize: '60px', marginBottom: '20px', marginTop: '20px' }}>$PITTI</h1>
       <div className='App-header-container'>
       <img src={pitti} alt='headerImage' className='header-image'/>
         <header className='App-header'>
