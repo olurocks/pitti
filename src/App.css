@@ -247,3 +247,56 @@ a {
   border: solid 2px;
   border-radius: 300px;
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 80px;
+  }
+  
+  .description {
+    font-size: 24px;
+  }
+
+  .App-header {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .header-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .App-meme {
+    width: 250px;
+  }
+
+  .goo {
+    height: 100px;
+  }
+
+  .drop {
+    width: 20px;
+    height: 30px;
+  }
+
+  .drop:nth-child(2) {
+    left: 15px;
+  }
+
+  .drop:nth-child(3) {
+    left: 30px;
+  }
+
+  .drop:nth-child(4) {
+    left: 45px;
+  }
+
+  .drop:nth-child(5) {
+    left: 60px;
+  }
+
+  .drop:nth-child(6) {
+    left: 75px;
+  }
+}
