@@ -61,7 +61,7 @@ function App() {
       </svg>
       
       <div className="goo">
-        <h1>$PITTI.</h1>
+        <h1>PITTI</h1>
         <div className="drop"></div>
         <div className="drop"></div>
         <div className="drop"></div>
@@ -112,7 +112,7 @@ function App() {
               <img src={dexscreenerIcon} alt="Dexscreener Icon" />
             </button>
           </a>
-          <a href='https://twitter.com/yourprofile' target='_blank' rel='noopener noreferrer'>
+          <a href='https://x.com/pittionsol?s=11' target='_blank' rel='noopener noreferrer'>
             <button className='link-prop'>
               <img src={twitterIcon} alt="Twitter Icon" />
             </button>

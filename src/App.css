@@ -17,8 +17,11 @@ body {
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   background-size: 100px 100px;
+  align-items: center;
 }
 
 .App::before {
@@ -47,15 +50,17 @@ body {
 }
 
 h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   margin-top: 50px;
-  margin-Left: -70px ;
   margin-bottom: -50px;
   font-weight: bold;
-  font-size: 120px;
+  font-size: 140px;
   text-align: center;
-  color: #007fed; /* $hue equivalent */
-  text-shadow: 2px 2px 0 #005bb5; /* $hue-dark equivalent */
+  color: #6f4e36; /* $hue equivalent */
+  text-shadow: 2px 2px 0 #d2bdad; /* $hue-dark equivalent */
 }
 
 .goo {
@@ -71,11 +76,11 @@ h1 {
   opacity: 0;
   width: 30px;
   height: 40px;
-  background: #0090ff; /* Adjusted hue */
+  background: #6f4e36; /* Adjusted hue */
   border-radius: 1000px;
   position: absolute;
   animation: drip 8s infinite;
-  border: 2px solid #005bb5; /* $hue-dark equivalent */
+  border: 2px solid #d2bdad; /* $hue-dark equivalent */
   border-top: none;
   top: 85px;
   left: 35px;
@@ -133,6 +138,7 @@ h1 {
   justify-content: center; /* Center items horizontally */
   margin-top: 10px; /* Top margin to reflect */
   flex-direction: row;
+  max-width: 60vh;
 }
 
 .App-header {
@@ -147,6 +153,7 @@ h1 {
   width: 300px;
   margin: 0 20px;
   border-radius: 7px;
+  margin-left: 10px;
 }
 
 .App-header-div {
@@ -198,11 +205,12 @@ a {
 
 .App-meme {
   max-width: 100%;
-  height: auto;
+  height: 350px;
   margin-top: 30px;
   width: 300px;
   border: solid #191712;
   border-radius: 20px;
+  justify-content: center;
 }
 
 .spaced-text {
@@ -251,44 +259,15 @@ a {
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 80px;
-    font-family: "Edu AU VIC WA NT Hand", cursive;
-    font-optical-sizing: auto;
-    font-weight: bolder;
-    font-style: normal;
-        color: #6f4e36;
-  }
+
   
   .description {
     font-size: 24px;
   }
 
-  .App-header {
-    width: 50vh;
-    margin: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .header-image {
-    display: none;
-  }
-
   .App-meme {
     width: 250px;
+    height: 270px;
   }
 
-  .goo {
-    height: auto;
-    filter: none;
-    color: #6f4e36;
-    }
-
-  .drop {
-    display: none;
-  }
 }
