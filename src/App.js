@@ -102,7 +102,7 @@ function App() {
       </div>
 
       <div className='links'>
-        <a href='https://t.me/yourchannel' target='_blank' rel='noopener noreferrer'>
+        <a href='https://t.me/pittionsol' target='_blank' rel='noopener noreferrer'>
             <button className='link-prop'>
               <img src={tgIcon} alt="Telegram Icon" />
             </button>
